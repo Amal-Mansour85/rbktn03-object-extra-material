@@ -32,9 +32,8 @@ var letter = {a: 1,
 // 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
 var person = {
               firstName: 'Mansour', 
-              lastname: 'Amal',
+              lastName: 'Amal',
                age : 22,
-              hometown:'Mahdia',
             };
 
 
@@ -53,7 +52,8 @@ var person = {
               Place of Birth: 'sfax'
               Activities: 'photography'
               Favorite TV Shows:'choufly hal'
-
+              favoriteColor: 'white'/'blue'
+              
             };
 
 
@@ -62,7 +62,7 @@ var person = {
 var person = {
               firstName: 'Mansour', 
                middleName: 'ben',
-              lastname: 'Amal',
+              lastName: 'Amal',
              };
 // 5.Look up something you want to buy on souq.com, and make an object that represents information about the item:
 
@@ -85,6 +85,12 @@ var obj ={ obj.hello = 'world',
        };
 // 8. Now, check the value of obj in the console and ensure that it has the two key/value pairs added above. This is how we create new key/value pairs in existing objects.
 
+var obj ={ obj.hello = 'world',
+            obj['number'] = 25/50,
+       };
+
+
+
 // 9.In the console attached to your main.js file, add a favoriteColor key/value pair to the object that represents you.
 
 // 10.Fix the attempts to access values in the person object:
@@ -94,6 +100,14 @@ var obj ={ obj.hello = 'world',
 //        age: 85,
 //        occupation: 'computer scientist'
 //  };
+var key ='name';
+var woman ={
+            name: 'Grace Hopper',
+             age: 85,
+      occupation: 'computer scientist',
+  };
+
+
 //  woman[age]; // => 85
 //  woman.key; // => 'Grace Hopper'
 //  woman['computer scientist'] // => ???
@@ -101,7 +115,16 @@ var obj ={ obj.hello = 'world',
 //  Read more about her contribution to our field here. (https://en.wikipedia.org/wiki/Grace_Hopper)
 
 // 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, and returns your full name.
+   
+    function formatName (person){
+   	var  fullname = '';
+   	for (var i = 0; i< person.lenght; i++){
 
+   		 fullname = 'firstName' + 'lastName' ;
+   		 person = person ++;
+   	}
+      return fullname;
+   }
 // 12.Using these objects:
 //  var people = [
 //        {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
