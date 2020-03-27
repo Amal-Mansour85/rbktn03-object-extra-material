@@ -11,7 +11,7 @@
 //        color: 'Yellow',
 //  }
 var person = {firstName: 'Yan', 
-              lastname: 'Fan' ,
+              lastName: 'Fan' ,
        };
 
 var letter = {a: 1,
@@ -46,7 +46,7 @@ var person = {
 //  Place of Birth
    var person = {
               firstName: 'Mansour', 
-              lastname: 'Amal',
+              lastName: 'Amal',
                age : 22,
               hometown:'Mahdia',
               Place of Birth: 'sfax'
@@ -68,9 +68,9 @@ var person = {
 
         var souq {
                    item:'Iphone11',
-                   ctr:'classe1',
-                   year:2020,
-                   rating : 5,
+                   Category/Type:'classe1'/'phone'
+                   year released:2020,
+                   rating :5,
                    price:1000,
                };
 
@@ -80,13 +80,14 @@ var person = {
 // 7.Add a new key/value pair to the object obj by assigning a new value to a new key like so:
 //  obj.hello = 'world';
 //  obj['number'] = 25;
-var obj ={ obj.hello = 'world',
-            obj['number'] = 25,
+var obj ={hello :'world',
+          number : 25,
        };
+      
 // 8. Now, check the value of obj in the console and ensure that it has the two key/value pairs added above. This is how we create new key/value pairs in existing objects.
 
-var obj ={ obj.hello = 'world',
-            obj['number'] = 25/50,
+var obj ={ hello : 'world',
+           number: 25/50,
        };
 
 
@@ -116,12 +117,12 @@ var woman ={
 
 // 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, and returns your full name.
    
-    function formatName (person){
+   		 function formatName (person){
    	var  fullname = '';
-   	for (var i = 0; i< person.lenght; i++){
-
-   		 fullname = 'firstName' + 'lastName' ;
-   		 person = person ++;
+   	for (var i = 0; i< person.lenght ; i++){ 
+   		 
+     fullname = 'firstName' + 'lastName';
+        person ++ ;
    	}
       return fullname;
    }
