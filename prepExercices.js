@@ -10,7 +10,8 @@
 //        type 'Golden Retriever'
 //        color: 'Yellow',
 //  }
-var person = {firstName: 'Yan', 
+var person = {
+	          firstName: 'Yan', 
               lastName: 'Fan' ,
        };
 
@@ -31,8 +32,8 @@ var letter = {a: 1,
           };
 // 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
 var person = {
-              firstName: 'Mansour', 
-              lastName: 'Amal',
+              firstName: 'Amal', 
+              lastName: 'Mansour',
                age : 22,
             };
 
@@ -45,8 +46,8 @@ var person = {
 //  Date of Birth
 //  Place of Birth
    var person = {
-              firstName: 'Mansour', 
-              lastName: 'Amal',
+              firstName: 'Amal', 
+              lastName: 'Mansour',
                age : 22,
               hometown:'Mahdia',
               Place of Birth: 'sfax'
@@ -60,9 +61,9 @@ var person = {
 
 // 4.Change your object to have a single name key, the value of which is an object – this object should have first, last and middle keys containing your first, last, and middle names respectively.
 var person = {
-              firstName: 'Mansour', 
+              firstName: 'Amal', 
                middleName: 'ben',
-              lastName: 'Amal',
+              lastName: 'Mansour',
              };
 // 5.Look up something you want to buy on souq.com, and make an object that represents information about the item:
 
@@ -80,13 +81,15 @@ var person = {
 // 7.Add a new key/value pair to the object obj by assigning a new value to a new key like so:
 //  obj.hello = 'world';
 //  obj['number'] = 25;
-var obj ={hello :'world',
+var obj ={ 
+	      hello :'world',
           number : 25,
        };
       
 // 8. Now, check the value of obj in the console and ensure that it has the two key/value pairs added above. This is how we create new key/value pairs in existing objects.
 
-var obj ={ hello : 'world',
+var obj ={ 
+	       hello : 'world',
            number: 25/50,
        };
 
@@ -117,15 +120,19 @@ var woman ={
 
 // 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, and returns your full name.
    
-   		 function formatName (person){
-   	var  fullname = '';
-   	for (var i = 0; i< person.lenght ; i++){ 
-   		 
-     fullname = 'firstName' + 'lastName';
-        person ++ ;
-   	}
-      return fullname;
-   }
+   		 var person = {
+              firstName: 'Amal', 
+               middleName: 'ben',
+              lastName: 'Mansour',
+             };
+
+         var personValues = []
+
+     for (var key in person) {
+      personValues.push(person[key]);
+         }
+
+   	
 // 12.Using these objects:
 //  var people = [
 //        {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
@@ -134,6 +141,27 @@ var woman ={
 //        {name: {first: 'Hedy', middle: 'E.', last: 'Lamarr'}, age: 85},
 //        {name: {first: 'Ruchi', last: 'Sanghvi'}, age: 34}
 //  ];
+    var people = [
+       {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
+       {name: {first: 'Adele', last: 'Goldstine'}, age: 43},
+       {name: {first: 'Ada', last: 'Lovelace'}, age: 36},
+       {name: {first: 'Hedy', middle: 'E.', last: 'Lamarr'}, age: 85},
+       {name: {first: 'Ruchi', last: 'Sanghvi'}, age: 34},
+       {name: {first: 'Amal',last:  'Mansour'},  age:22},
+        ];
+
+var peopleValues = [] ;
+
+function obj (people) {
+for (var key =0 ;key< people.length ; key++)
+   for ( var key in people ){
+}
+peopleValues.push(people[key]);
+}
+
+
+
+
 //  Add the object representing yourself (person) to this array of people (if your name key does not have the same 'shape' as the ones above,
 //  change it to look like these).
 //  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function here?
@@ -141,6 +169,10 @@ var woman ={
 //  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified age.
 //  Side Note: The women in the people array are all very famous. What did they do?
 //  Bonus Points: What is the name of the woman in the picture here?
+ 
+
+
+
 
 // 13.The following object has a number of key/value pairs that need to be removed:
 //  var dirtyObject = {
